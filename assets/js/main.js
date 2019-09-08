@@ -35,7 +35,9 @@ $(function () {
     var foo = $('#mainmenu > ul');
     foo.dropotron();
 //Slider start    
-    $("#imgslider").ImgSlider();
+	var slider=$("#imgslider");
+	console.log(slider);
+    if(slider.length>0) slider.ImgSlider();
  
  
  
