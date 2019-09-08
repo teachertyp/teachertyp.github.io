@@ -3,6 +3,7 @@ window.onscroll = function() {scrollmenu()};
 var navbar = document.getElementById("mmenu");
 var sticky = navbar.offsetTop;
 var wrapmenu = document.getElementById("wrapmenu");
+
 //---------------Mobile menu    -----------------
         var mm=document.createElement('div');
 			mm.className="modal";
@@ -56,6 +57,16 @@ $(function () {
         
     });
     
+    $(document).on("click",".modal-close",function(){
+        $(".modal").removeClass("is-active");
+        //document.body.style.position="unset";
+        
+    });
+    
+    $(document).on("click",".modal-background",function(){
+        $(".modal").removeClass("is-active");
+    })
+
 });
 
 
