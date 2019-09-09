@@ -6,11 +6,15 @@
 jQuery.fn.ImgSlider = function() {
   // Тут пишем код
     var make = function(){
-        
+        var colors=["to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12",
+					"to right, #051937, #004d7a, #008793, #00bf72, #a8eb12",
+					"to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12"];
         var items=this.querySelectorAll('.slider-item');
         
         items.forEach(function(item, i, items) {
-            item.style.backgroundImage = "url('"+item.dataset.url+"')";
+			console.log("linear-gradient("+colors[i]+")");
+            items[i].style.backgroundImage = "linear-gradient("+colors[i]+")";
+            console.log('-');
             items[i].style.opacity="0";
         });
         items[0].style.opacity="1";
